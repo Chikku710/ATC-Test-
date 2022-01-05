@@ -8,16 +8,9 @@ metadata:
     service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
-spec:
-  type: NodePort
-  ports:  
-  - name: http
-    port: 3000
-    targetPort: 3000
-    nodePort: 30000
-    protocol: TCP        
-    #  type: LoadBalancer
-    #  ports:
-    #  - port: 3000
+spec:   
+  type: LoadBalancer
+  ports:
+    - port: 3000
   selector:
     app: hello-world
