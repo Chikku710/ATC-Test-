@@ -14,7 +14,7 @@ spec:
     spec:     # pod spec                  
       containers: 
       - name: hello-world 
-        image: 1296672/hello-world-image:v1 # image we pushed
+        image: chikku710/atctest:v1 # image we pushed
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
